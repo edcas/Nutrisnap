@@ -27,42 +27,6 @@
 
         .brand-green { color: #27AE60; }
         .bg-brand-green { background-color: #27AE60; }
-
-        /* Video placeholder styles */
-        .video-placeholder {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background-color: #000;
-            border-radius: 0.5rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 80px;
-            height: 80px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 50%;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .play-button:hover {
-            background-color: rgba(39, 174, 96, 0.8);
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-        .play-button svg {
-            width: 40px;
-            height: 40px;
-            color: white;
-            margin-left: 5px;
-        }
         
         /* Scroll down arrow animation */
         .scroll-down {
@@ -82,6 +46,13 @@
             60% {
                 transform: translateX(-50%) translateY(-10px);
             }
+        }
+        .story-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
     </style>
 </head>
@@ -110,20 +81,6 @@
                 <svg class="w-8 h-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
-            </div>
-        </section>
-
-        <!-- Section 0: Storytelling Video (Fixed) -->
-        <section id="storytelling-video" class="min-h-screen flex items-center justify-center">
-            <div class="max-w-4xl w-full text-center p-8">
-                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight">El Reto que Nos Impulsa a Actuar</h1>
-                <p class="mt-4 text-lg text-gray-600">Antes de mostrarte nuestra solución, queremos que veas el porqué de nuestra misión.</p>
-                <div class="mt-8 video-placeholder">
-                    <a href="https://drive.google.com/file/d/16P1ATL1PfJ2BsMpKkmqhW-AkhO12pYyC/view?usp=sharing" target="_blank" class="play-button" aria-label="Reproducir video">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
-                    </a>
-                </div>
-                <p class="mt-4 text-sm text-gray-500">(El video se abrirá en una nueva pestaña para asegurar la reproducción)</p>
             </div>
         </section>
 
@@ -172,51 +129,34 @@
                     </div>
                     <!-- Right side: Image -->
                     <div class="hidden md:block">
-                        <img src="https://i.imgur.com/8zLJH90.jpeg" alt="Mercado concurrido en Perú" class="h-full w-full object-cover">
+                        <img src="https://fmdiabetes.org/wp-content/uploads/2015/10/obesidad1.jpg" alt="Persona con sobrepeso y cinta métrica, representando el problema de la obesidad" class="h-full w-full object-cover">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 2: Market Size (Revised) -->
-        <section id="market-size" class="min-h-screen flex items-center justify-center">
-             <div class="w-full bg-white rounded-2xl shadow-xl overflow-hidden">
-                <div class="grid grid-cols-1 md:grid-cols-2">
-                    <div class="p-8 md:p-12">
-                        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight">Un Mercado de S/ 3,000 Millones listo para tu Marca</h1>
-                        
-                        <div class="mt-8 space-y-6">
-                            <div>
-                                <h3 class="font-bold text-gray-700">Nuestro Foco: El Corazón del Consumo Consciente</h3>
-                                <p class="text-gray-600 mt-1">La Healthy-Generation: Millenials y Gen-Z que no negocian su bienestar y usan la tecnología para optimizarlo.</p>
-                            </div>
-                             <div>
-                                <h3 class="font-bold text-gray-700">El Universo Conectado al que Apuntamos:</h3>
-                                <ul class="list-disc list-inside text-gray-600 mt-2">
-                                    <li><span class="font-semibold">5 a 7 millones de peruanos</span> ya buscan activamente opciones saludables.</li>
-                                    <li><span class="font-semibold">88% de penetración de smartphones</span> nos permite llegar a ellos al instante.</li>
-                                </ul>
-                            </div>
-                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <h4 class="font-bold text-gray-700">Inversión Mensual en Bienestar (NSE B)</h4>
-                                    <p class="brand-green font-semibold text-lg">S/ 250 - S/ 400</p>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <h4 class="font-bold text-gray-700">Inversión Mensual en Bienestar (NSE C)</h4>
-                                    <p class="brand-green font-semibold text-lg">S/ 120 - S/ 250</p>
-                                </div>
-                            </div>
-                             <div class="bg-green-100 p-4 rounded-lg text-center">
-                                <h3 class="font-bold text-green-800 text-xl">Tu Oportunidad de Crecimiento</h3>
-                                <p class="text-green-700">Un mercado de S/ 3,000 millones que crece un 15% anualmente, esperando soluciones digitales que conecten con su estilo de vida.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hidden md:block">
-                        <img src="https://i.imgur.com/Yw1qJ5F.jpeg" alt="Personas usando un smartphone en un café" class="h-full w-full object-cover">
-                    </div>
-                </div>
+        <!-- Section 2: User Story Slides -->
+        <section id="user-story-1" class="min-h-screen story-slide">
+            <div class="max-w-4xl w-full text-center p-8">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight">La mañana es una carrera.</h2>
+                <p class="mt-4 text-lg text-gray-600">El dilema diario: ¿cinco minutos más de sueño o un desayuno saludable?</p>
+                <img src="https://videos.openai.com/vg-assets/assets%2Ftask_01k0d6zteffz4r3fkgvww1rhq3%2F1752790306_img_1.webp?st=2025-07-17T20%3A37%3A51Z&se=2025-07-23T21%3A37%3A51Z&sks=b&skt=2025-07-17T20%3A37%3A51Z&ske=2025-07-23T21%3A37%3A51Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=9FIqycLneLmeo1ezYbBYyYrNt1y25LdH3HNkjVI5dsg%3D&az=oaivgprodscus" alt="Persona apurada por la mañana, decidiendo entre dormir o desayunar" class="mt-8 rounded-lg shadow-xl mx-auto">
+            </div>
+        </section>
+
+        <section id="user-story-2" class="min-h-screen story-slide">
+            <div class="max-w-4xl w-full text-center p-8">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight">La intención es buena. La información, no tanto.</h2>
+                <p class="mt-4 text-lg text-gray-600">Quieres elegir bien, pero las etiquetas parecen un idioma extranjero.</p>
+                <img src="https://videos.openai.com/vg-assets/assets%2Ftask_01k0d6gxspewcthxzpbe6wdt8g%2F1752789811_img_0.webp?st=2025-07-17T20%3A40%3A03Z&se=2025-07-23T21%3A40%3A03Z&sks=b&skt=2025-07-17T20%3A40%3A03Z&ske=2025-07-23T21%3A40%3A03Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=leitvFwx55Uigr2PUWP4FS6BtmmSMFyuyJZBpNV4gyw%3D&az=oaivgprodscus" alt="Persona confundida leyendo la etiqueta nutricional de un producto" class="mt-8 rounded-lg shadow-xl mx-auto">
+            </div>
+        </section>
+
+        <section id="user-story-3" class="min-h-screen story-slide">
+            <div class="max-w-4xl w-full text-center p-8">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight">Y al final, la conveniencia gana.</h2>
+                <p class="mt-4 text-lg text-gray-600">Terminas comiendo lo de siempre, lo que está a la mano. El ciclo se repite.</p>
+                <img src="https://videos.openai.com/vg-assets/assets%2Ftask_01k0d6t1a8fpe9sq3fv6mfgte9%2F1752790127_img_1.webp?st=2025-07-17T20%3A38%3A24Z&se=2025-07-23T21%3A38%3A24Z&sks=b&skt=2025-07-17T20%3A38%3A24Z&ske=2025-07-23T21%3A38%3A24Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=GEN02G25EzagRiYgM6omt2t471tE3iBiN1ZXjGtdMhU%3D&az=oaivgprodscus" alt="Persona comiendo comida rápida, resignada a la opción más fácil" class="mt-8 rounded-lg shadow-xl mx-auto">
             </div>
         </section>
 
@@ -484,6 +424,56 @@
                 <div class="mt-12 border-t pt-8 text-center">
                     <h2 class="text-2xl font-bold text-gray-800">Engagement Profundo → Redención de Beneficios</h2>
                     <p class="mt-2 max-w-3xl mx-auto text-gray-600">Es el indicador que asegura conversión real. Mide cuántos usuarios canjean descuentos, participan en retos o realizan compras, consolidando el <span class="font-semibold">reconocimiento de tu marca</span> y convirtiéndola en la <span class="font-semibold">opción preferida de compra</span>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: Closing CTA (New) -->
+        <section id="closing-cta" class="py-20">
+            <div class="max-w-6xl mx-auto text-center bg-white p-12 rounded-2xl shadow-lg">
+                <h2 class="text-3xl font-bold text-gray-800">El Futuro es un Ecosistema de Bienestar</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Nuestros siguientes pasos están diseñados para crear un ciclo virtuoso de valor para usuarios y marcas.</p>
+                
+                <!-- Roadmap Timeline -->
+                <div class="mt-12">
+                    <div class="relative">
+                        <!-- Timeline line -->
+                        <div class="absolute left-1/2 top-4 h-2/3 w-0.5 bg-gray-200" aria-hidden="true"></div>
+                        
+                        <!-- Roadmap Items -->
+                        <div class="relative flex flex-col gap-y-12">
+                            <!-- Item 1 -->
+                            <div class="relative flex items-center">
+                                <div class="w-1/2 pr-8 text-right">
+                                    <p class="text-sm font-semibold text-gray-500">Q1 y Q2 2026</p>
+                                    <h3 class="text-xl font-bold text-gray-800 mt-1">Plataforma de Nutriólogos</h3>
+                                    <p class="text-gray-600 mt-2">Lanzamiento de la plataforma para que nutriólogos certificados validen recomendaciones y ofrezcan planes, generando insights de mercado únicos.</p>
+                                </div>
+                                <div class="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-brand-green flex items-center justify-center text-white shadow-md">
+                                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"/></svg>
+                                </div>
+                                <div class="w-1/2 pl-8"></div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="relative flex items-center">
+                                <div class="w-1/2 pr-8"></div>
+                                <div class="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-brand-green flex items-center justify-center text-white shadow-md">
+                                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                                </div>
+                                <div class="w-1/2 pl-8 text-left">
+                                    <p class="text-sm font-semibold text-gray-500">Q3 y Q4 2026</p>
+                                    <h3 class="text-xl font-bold text-gray-800 mt-1">Funcionalidad Social: "Amigos"</h3>
+                                    <p class="text-gray-600 mt-2">Implementación de perfiles sociales, retos grupales y logros compartidos para aumentar la retención y el crecimiento viral.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 border-t pt-10">
+                    <h2 class="text-4xl font-extrabold tracking-tight text-gray-800">
+                        ¿Quién se suma a nuestra misión de llevar <span class="brand-green">conciencia y recompensa</span> a los hábitos saludables, sin fricciones?
+                    </h2>
                 </div>
             </div>
         </section>
