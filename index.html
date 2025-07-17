@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación de Patrocinio NutriSnap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* bg-gray-50 */
+            scroll-behavior: smooth;
+        }
+        /* Custom styles from previous slides */
+        .card-header-basic { background-color: #27AE60; }
+        .btn-basic { background-color: #27AE60; }
+        .btn-basic:hover { background-color: #229954; }
+
+        .card-header-intermediate { background-color: #2D7DF6; }
+        .btn-intermediate { background-color: #2D7DF6; }
+        .btn-intermediate:hover { background-color: #2968c8; }
+
+        .card-header-premium { background-image: linear-gradient(to right, #F97300, #EA4335); }
+        .btn-premium { background-image: linear-gradient(to right, #F97300, #EA4335); }
+        .btn-premium:hover { background-image: linear-gradient(to right, #e06a00, #d23c2d); }
+
+        .brand-green { color: #27AE60; }
+        .bg-brand-green { background-color: #27AE60; }
+
+        /* Video placeholder styles */
+        .video-placeholder {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .play-button:hover {
+            background-color: rgba(39, 174, 96, 0.8);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        .play-button svg {
+            width: 40px;
+            height: 40px;
+            color: white;
+            margin-left: 5px;
+        }
+        
+        /* Scroll down arrow animation */
+        .scroll-down {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <main class="max-w-7xl mx-auto">
+
+        <!-- Section -1: Cover Page (New) -->
+        <section id="cover" class="min-h-screen flex flex-col items-center justify-center text-center relative">
+            <div class="flex flex-col items-center">
+                <!-- Abstract Logo -->
+                <div class="w-40 h-40 mb-6">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30 5H70C78.2843 5 85 11.7157 85 20V80C85 88.2843 78.2843 95 70 95H30C21.7157 95 15 88.2843 15 80V20C15 11.7157 21.7157 5 30 5Z" stroke="#27AE60" stroke-width="3"/>
+                        <path d="M40 12H60" stroke="#27AE60" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M50 35C45 35 42.5 45 50 50C57.5 55 55 65 50 70C45 75 42.5 65 50 60C57.5 55 55 45 50 42.5C45 40 47.5 30 50 35Z" stroke="#27AE60" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M50 35C52.5 32.5 55 30 57.5 32.5" stroke="#27AE60" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h1 class="text-6xl md:text-7xl font-extrabold text-gray-800 tracking-tighter">NUTRISNAPP</h1>
+                <p class="mt-2 text-2xl text-gray-500">Conciencia para comer mejor</p>
+            </div>
+             <div class="scroll-down">
+                <svg class="w-8 h-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Section 0: Storytelling Video (Fixed) -->
+        <section id="storytelling-video" class="min-h-screen flex items-center justify-center">
+            <div class="max-w-4xl w-full text-center p-8">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight">El Reto que Nos Impulsa a Actuar</h1>
+                <p class="mt-4 text-lg text-gray-600">Antes de mostrarte nuestra solución, queremos que veas el porqué de nuestra misión.</p>
+                <div class="mt-8 video-placeholder">
+                    <a href="https://drive.google.com/file/d/16P1ATL1PfJ2BsMpKkmqhW-AkhO12pYyC/view?usp=sharing" target="_blank" class="play-button" aria-label="Reproducir video">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+                    </a>
+                </div>
+                <p class="mt-4 text-sm text-gray-500">(El video se abrirá en una nueva pestaña para asegurar la reproducción)</p>
+            </div>
+        </section>
+
+        <!-- Section 1: The Problem -->
+        <section id="problem" class="min-h-screen flex items-center justify-center">
+            <div class="w-full bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <!-- Left side: Data -->
+                    <div class="p-8 md:p-12">
+                        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight">Problema Crítico en Perú: Obesidad y Mala Nutrición</h1>
+                        <p class="mt-4 text-lg text-gray-600">Una crisis de salud silenciosa está creciendo, impulsada por hábitos que podemos cambiar.</p>
+                        
+                        <div class="mt-8 grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <p class="text-4xl md:text-5xl font-bold brand-green">70.5%</p>
+                                <p class="text-sm text-gray-500 mt-1">Adultos con exceso de peso</p>
+                            </div>
+                            <div>
+                                <p class="text-4xl md:text-5xl font-bold brand-green">40%</p>
+                                <p class="text-sm text-gray-500 mt-1">Escolares con sobrepeso</p>
+                            </div>
+                            <div>
+                                <p class="text-4xl md:text-5xl font-bold brand-green">1/3</p>
+                                <p class="text-sm text-gray-500 mt-1">Adultos sedentarios</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 space-y-6">
+                            <div>
+                                <h3 class="font-bold text-gray-700">Causas Principales:</h3>
+                                <ul class="list-disc list-inside text-gray-600 mt-2">
+                                    <li>Dietas altas en harinas, azúcar y procesados.</li>
+                                    <li>Falta de educación nutricional accesible.</li>
+                                    <li>Estilo de vida urbano acelerado y estresante.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-700">Consecuencias Directas:</h3>
+                                <ul class="list-disc list-inside text-gray-600 mt-2">
+                                    <li>Aumento de diabetes tipo 2 e hipertensión.</li>
+                                    <li>30% del gasto público en salud es para tratar estas enfermedades.</li>
+                                    <li>Pérdida de productividad y calidad de vida.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right side: Image -->
+                    <div class="hidden md:block">
+                        <img src="https://i.imgur.com/8zLJH90.jpeg" alt="Mercado concurrido en Perú" class="h-full w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Market Size (Revised) -->
+        <section id="market-size" class="min-h-screen flex items-center justify-center">
+             <div class="w-full bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="p-8 md:p-12">
+                        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight">Un Mercado de S/ 3,000 Millones listo para tu Marca</h1>
+                        
+                        <div class="mt-8 space-y-6">
+                            <div>
+                                <h3 class="font-bold text-gray-700">Nuestro Foco: El Corazón del Consumo Consciente</h3>
+                                <p class="text-gray-600 mt-1">La Healthy-Generation: Millenials y Gen-Z que no negocian su bienestar y usan la tecnología para optimizarlo.</p>
+                            </div>
+                             <div>
+                                <h3 class="font-bold text-gray-700">El Universo Conectado al que Apuntamos:</h3>
+                                <ul class="list-disc list-inside text-gray-600 mt-2">
+                                    <li><span class="font-semibold">5 a 7 millones de peruanos</span> ya buscan activamente opciones saludables.</li>
+                                    <li><span class="font-semibold">88% de penetración de smartphones</span> nos permite llegar a ellos al instante.</li>
+                                </ul>
+                            </div>
+                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-bold text-gray-700">Inversión Mensual en Bienestar (NSE B)</h4>
+                                    <p class="brand-green font-semibold text-lg">S/ 250 - S/ 400</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-bold text-gray-700">Inversión Mensual en Bienestar (NSE C)</h4>
+                                    <p class="brand-green font-semibold text-lg">S/ 120 - S/ 250</p>
+                                </div>
+                            </div>
+                             <div class="bg-green-100 p-4 rounded-lg text-center">
+                                <h3 class="font-bold text-green-800 text-xl">Tu Oportunidad de Crecimiento</h3>
+                                <p class="text-green-700">Un mercado de S/ 3,000 millones que crece un 15% anualmente, esperando soluciones digitales que conecten con su estilo de vida.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden md:block">
+                        <img src="https://i.imgur.com/Yw1qJ5F.jpeg" alt="Personas usando un smartphone en un café" class="h-full w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Vision & Mission -->
+        <section id="vision-mission" class="min-h-screen flex items-center justify-center">
+            <div class="max-w-4xl w-full text-center p-8">
+                <h1 class="text-2xl md:text-3xl font-semibold text-gray-700 leading-snug">
+                    Transformamos cada foto de comida en <span class="brand-green font-bold">conciencia y recompensa</span>, guiando hábitos saludables sin fricciones, de la mano de marcas aliadas.
+                </h1>
+                <p class="mt-8 text-3xl md:text-5xl font-extrabold text-gray-800 tracking-tight">
+                    Ser el hub lifestyle de la Healthy-Generation.
+                </p>
+                 <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                   Donde nutrición, movimiento y comunidad convergen para inspirar bienestar — y darle a tus marcas el escenario más auténtico del mercado.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 4: Value Proposition -->
+        <section id="value-proposition" class="min-h-screen flex items-center justify-center">
+            <div class="max-w-5xl w-full bg-white rounded-2xl shadow-xl p-8 sm:p-12">
+                <header class="text-center mb-10">
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight">Propuesta de Valor Nutrisnap</h1>
+                    <p class="mt-3 text-lg text-gray-600">Un solo disparo de cámara transforma la foto de tu comida en 3 cosas al instante:</p>
+                </header>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Conciencia -->
+                    <div class="space-y-3">
+                        <div class="mx-auto bg-green-100 rounded-full h-16 w-16 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg></div>
+                        <h3 class="font-bold text-lg text-gray-800">Conciencia Personalizada</h3>
+                        <p class="text-gray-600">Feedback nutricional claro y sin culpas.</p>
+                    </div>
+                    <!-- Acción -->
+                    <div class="space-y-3">
+                        <div class="mx-auto bg-green-100 rounded-full h-16 w-16 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div>
+                        <h3 class="font-bold text-lg text-gray-800">Acción Inmediata</h3>
+                        <p class="text-gray-600">Recomendaciones de movimiento y bienestar.</p>
+                    </div>
+                    <!-- Recompensas -->
+                    <div class="space-y-3">
+                        <div class="mx-auto bg-green-100 rounded-full h-16 w-16 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /><path d="M22 11.08V12a10 10 0 11-5.93-9.14" /></svg></div>
+                        <h3 class="font-bold text-lg text-gray-800">Recompensas Relevantes</h3>
+                        <p class="text-gray-600">Beneficios de marcas aliadas justo a tiempo.</p>
+                    </div>
+                </div>
+                <div class="mt-12 border-t pt-8 bg-gray-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-xl text-center text-gray-800">Para los Auspiciadores</h3>
+                    <p class="mt-3 text-center text-gray-600">Acceso al “micro-momento” en que 1 persona de la Healthy-Generation decide su próximo bocado, con atribución directa y ROI medible, además de un producto basado en datos que te da otro punto de inteligencia para convertirlos en clientes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Prototype CTA -->
+        <section id="prototype-cta" class="min-h-screen flex items-center justify-center">
+            <div class="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-8 sm:p-12 text-center">
+                <div class="mx-auto bg-green-100 rounded-full h-20 w-20 flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight">Demostración del Prototipo Interactivo</h2>
+                <p class="mt-4 text-lg text-gray-600">A continuación, se abrirá una nueva pestaña en tu navegador para mostrarte el prototipo en acción.</p>
+            </div>
+        </section>
+
+        <!-- Section 6: MVP Results (Adjusted) -->
+        <section id="mvp-results" class="py-20">
+             <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12">
+                <header class="text-center mb-12">
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight">Resultados de Nuestro MVP (6 Meses)</h1>
+                    <p class="mt-3 text-lg text-gray-600">Validamos el mercado y demostramos un potencial real y creíble. Estos son los datos:</p>
+                </header>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Metric Card: Users -->
+                    <div class="bg-gray-50 p-6 rounded-xl text-center">
+                        <p class="text-sm text-gray-500">Usuarios activos/mes</p>
+                        <p class="text-4xl font-bold brand-green mt-2">8.5k</p>
+                        <p class="text-gray-600 mt-3 text-sm">Audiencia saludable ya cautiva, sin necesidad de anuncios pagados.</p>
+                    </div>
+                    <!-- Metric Card: Engagement -->
+                    <div class="bg-gray-50 p-6 rounded-xl text-center">
+                        <p class="text-sm text-gray-500">Engagement Total</p>
+                        <p class="text-4xl font-bold brand-green mt-2">150k</p>
+                        <p class="text-gray-600 mt-3 text-sm">Fotos escaneadas. Un touchpoint clave justo antes de comer o comprar.</p>
+                    </div>
+                    <!-- Metric Card: Monetization -->
+                    <div class="bg-gray-50 p-6 rounded-xl text-center">
+                        <p class="text-sm text-gray-500">Monetización</p>
+                        <p class="text-4xl font-bold brand-green mt-2">2.5 : 1</p>
+                        <p class="text-gray-600 mt-3 text-sm">ROI probado. Las tarjetas y afiliados son rentables sin fricción para el usuario.</p>
+                    </div>
+                     <!-- Metric Card: Card Efficacy -->
+                    <div class="bg-gray-50 p-6 rounded-xl text-center lg:col-span-2">
+                        <p class="text-sm text-gray-500">Eficacia de Cards</p>
+                        <div class="flex justify-center items-baseline gap-6 mt-2">
+                            <div>
+                                <p class="text-4xl font-bold brand-green">4.2%</p>
+                                <p class="text-xs text-gray-500">CTR</p>
+                            </div>
+                             <div>
+                                <p class="text-4xl font-bold brand-green">18%</p>
+                                <p class="text-xs text-gray-500">Redención</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mt-3 text-sm">Las ofertas patrocinadas se convierten en ventas reales y medibles.</p>
+                    </div>
+                    <!-- Metric Card: Time Insight -->
+                    <div class="bg-gray-50 p-6 rounded-xl text-center">
+                        <p class="text-sm text-gray-500">Insight Horario</p>
+                        <p class="text-4xl font-bold brand-green mt-2">19-21h</p>
+                        <p class="text-gray-600 mt-3 text-sm">Ventana ideal para promociones de cena y rutinas de ejercicio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Projections (New) -->
+        <section id="projections" class="py-20">
+            <div class="max-w-6xl mx-auto text-center">
+                 <header class="mb-12">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 tracking-tight">
+                        <span class="brand-green">Tenemos Tracción.</span> Ahora, Vamos a las Grandes Ligas.
+                    </h1>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Nuestra proyección a 1 año es ambiciosa y alcanzable. Buscamos socios estratégicos que compartan nuestra misión de llevar conciencia y recompensa a la alimentación, sin fricciones.</p>
+                </header>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Projection Card: Users -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <p class="text-sm font-semibold text-gray-500">Usuarios Activos (MAU)</p>
+                        <p class="text-5xl font-bold brand-green mt-2">75k</p>
+                        <p class="text-gray-600 mt-3">Crecimiento de <span class="font-bold">casi 9x</span>, creando una comunidad masiva.</p>
+                    </div>
+                    <!-- Projection Card: Engagement -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <p class="text-sm font-semibold text-gray-500">Interacciones Totales</p>
+                        <p class="text-5xl font-bold brand-green mt-2">1.2M</p>
+                        <p class="text-gray-600 mt-3">Millones de "micro-momentos" para conectar con tu marca.</p>
+                    </div>
+                    <!-- Projection Card: ROI -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <p class="text-sm font-semibold text-gray-500">ROI para Socios</p>
+                        <p class="text-5xl font-bold brand-green mt-2">4:1</p>
+                        <p class="text-gray-600 mt-3">Optimizaremos la plataforma para maximizar el retorno de nuestros aliados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Sponsorship Plans -->
+        <section id="sponsorship-plans" class="py-20">
+            <header class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 tracking-tight">¡Conquista la Healthy-Generation con Nutrisnap!</h1>
+                <p class="mt-4 text-lg text-gray-600 max-w-4xl mx-auto">Conecta con nuestra creciente comunidad de <span class="font-bold">8,500 usuarios activos</span> y haz que tu marca aparezca justo cuando deciden comer y vivir mejor.</p>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+                <!-- Tier 1: Básico -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+                    <div class="p-6 card-header-basic text-white">
+                        <h2 class="text-2xl font-bold">Nivel Básico</h2>
+                        <p class="text-lg font-medium">Paquete “Impulso de Marca”</p>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="text-gray-800">
+                            <span class="text-4xl font-bold">US $500 – 1,500</span>
+                            <span class="text-base font-medium text-gray-500">/ mes</span>
+                        </div>
+                        <p class="italic text-gray-600 my-4">“Arranca tu presencia saludable”</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 text-left flex-grow">
+                            <li>1 carrusel (Estilo de vida ó Recetas)</li>
+                            <li>10,000 impresiones garantizadas</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <button class="w-full btn-basic text-white font-bold py-3 px-4 rounded-lg transition-all duration-300">Ver Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Tier 2: Intermedio -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col scale-105 border-2 border-blue-500">
+                     <div class="p-6 card-header-intermediate text-white">
+                        <h2 class="text-2xl font-bold">Nivel Intermedio</h2>
+                        <p class="text-lg font-medium">Paquete “Engage & Grow”</p>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="text-gray-800">
+                            <span class="text-4xl font-bold">US $2,000 – 5,000</span>
+                            <span class="text-base font-medium text-gray-500">/ mes</span>
+                        </div>
+                        <p class="italic text-gray-600 my-4">“Conecta y escala tu engagement”</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 text-left flex-grow">
+                            <li>Ambos carruseles y segmentación por hábitos</li>
+                            <li>25,000 impresiones garantizadas + Push in-app</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                         <button class="w-full btn-intermediate text-white font-bold py-3 px-4 rounded-lg transition-all duration-300">Ver Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Tier 3: Premium -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+                    <div class="p-6 card-header-premium text-white">
+                        <h2 class="text-2xl font-bold">Nivel Premium</h2>
+                        <p class="text-lg font-medium">Paquete “Socio Estratégico”</p>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="text-gray-800">
+                            <span class="text-4xl font-bold">US $6,000 – 15,000+</span>
+                            <span class="text-base font-medium text-gray-500">/ mes</span>
+                        </div>
+                        <p class="italic text-gray-600 my-4">“Domina el ecosistema wellness”</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 text-left flex-grow">
+                            <li>Exclusividad de categoría y +50K impresiones</li>
+                            <li>Retos gamificados, insights y API lead-gen</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                         <button class="w-full btn-premium text-white font-bold py-3 px-4 rounded-lg transition-all duration-300">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: ROI and KPIs -->
+        <section id="roi-kpi" class="py-20">
+            <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12">
+                <header class="text-center mb-10">
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight">ROI Garantizado + KPI Clave para Crecer</h1>
+                </header>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="space-y-8">
+                        <div>
+                            <p class="text-gray-600 leading-relaxed">En Nutrisnap, tu inversión se traduce en resultados tangibles, no solo en visibilidad. Nuestro modelo conecta a tu marca con usuarios en el momento de decisión de compra y consumo, asegurando que cada dólar invertido genere retorno.</p>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-700 mb-4">¿Por qué confiar?</h2>
+                            <ul class="space-y-3">
+                                <li class="flex items-start"><span class="text-green-500 font-bold mr-2">✔</span><p class="text-gray-700"><span class="font-semibold">ROI probado de 2.5:1</span> en nuestro MVP.</p></li>
+                                <li class="flex items-start"><span class="text-green-500 font-bold mr-2">✔</span><p class="text-gray-700"><span class="font-semibold">Segmentación basada en hábitos reales</span>.</p></li>
+                                <li class="flex items-start"><span class="text-green-500 font-bold mr-2">✔</span><p class="text-gray-700"><span class="font-semibold">Integración nativa</span> que incrementa CTR y redención.</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-8">
+                        <div class="space-y-2 mb-8">
+                            <div class="bg-green-500 text-white text-center font-semibold py-2 px-4 rounded-t-lg">Impresiones</div>
+                            <div class="flex justify-center"><svg class="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg></div>
+                            <div class="bg-green-400 text-white text-center font-semibold py-2 px-4 w-5/6 mx-auto">Clics</div>
+                            <div class="flex justify-center"><svg class="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg></div>
+                            <div class="bg-green-300 text-white text-center font-semibold py-2 px-4 w-4/6 mx-auto">Redenciones</div>
+                            <div class="flex justify-center"><svg class="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg></div>
+                            <div class="bg-green-200 text-green-800 text-center font-semibold py-2 px-4 rounded-b-lg w-3/6 mx-auto">Ventas</div>
+                        </div>
+                        <div class="border-2 border-dashed border-gray-300 rounded-lg p-4">
+                            <h3 class="text-center font-bold text-gray-700 mb-4">Métricas Clave del MVP</h3>
+                            <div class="flex justify-around text-center">
+                                <div><p class="text-3xl font-bold brand-green">4.2%</p><p class="text-sm text-gray-500">CTR</p></div>
+                                <div><p class="text-3xl font-bold brand-green">18%</p><p class="text-sm text-gray-500">Tasa de Redención</p></div>
+                                <div><p class="text-3xl font-bold brand-green">2.5:1</p><p class="text-sm text-gray-500">ROI</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 border-t pt-8 text-center">
+                    <h2 class="text-2xl font-bold text-gray-800">Engagement Profundo → Redención de Beneficios</h2>
+                    <p class="mt-2 max-w-3xl mx-auto text-gray-600">Es el indicador que asegura conversión real. Mide cuántos usuarios canjean descuentos, participan en retos o realizan compras, consolidando el <span class="font-semibold">reconocimiento de tu marca</span> y convirtiéndola en la <span class="font-semibold">opción preferida de compra</span>.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
