@@ -27,6 +27,42 @@
 
         .brand-green { color: #27AE60; }
         .bg-brand-green { background-color: #27AE60; }
+
+        /* Video placeholder styles */
+        .video-placeholder {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .play-button:hover {
+            background-color: rgba(39, 174, 96, 0.8);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        .play-button svg {
+            width: 40px;
+            height: 40px;
+            color: white;
+            margin-left: 5px;
+        }
         
         /* Scroll down arrow animation */
         .scroll-down {
@@ -46,13 +82,6 @@
             60% {
                 transform: translateX(-50%) translateY(-10px);
             }
-        }
-        .story-slide {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
         }
     </style>
 </head>
@@ -240,13 +269,13 @@
                     <div class="bg-gray-50 p-6 rounded-xl text-center">
                         <p class="text-sm text-gray-500">Engagement Total</p>
                         <p class="text-4xl font-bold brand-green mt-2">150k</p>
-                        <p class="text-gray-600 mt-3 text-sm">Fotos escaneadas. Un touchpoint clave justo antes de comer o comprar.</p>
+                        <p class="text-gray-600 mt-3 text-sm">comidas escaneadas. Un touchpoint clave</p>
                     </div>
                     <!-- Metric Card: Monetization -->
                     <div class="bg-gray-50 p-6 rounded-xl text-center">
                         <p class="text-sm text-gray-500">Monetización</p>
                         <p class="text-4xl font-bold brand-green mt-2">2.5 : 1</p>
-                        <p class="text-gray-600 mt-3 text-sm">ROI probado. Las tarjetas y afiliados son rentables sin fricción para el usuario.</p>
+                        <p class="text-gray-600 mt-3 text-sm">ROI probado. primeros sponsors rentables poca fricción</p>
                     </div>
                      <!-- Metric Card: Card Efficacy -->
                     <div class="bg-gray-50 p-6 rounded-xl text-center lg:col-span-2">
@@ -349,7 +378,7 @@
                         <p class="italic text-gray-600 my-4">“Conecta y escala tu engagement”</p>
                         <ul class="list-disc list-inside space-y-2 text-gray-700 text-left flex-grow">
                             <li>Ambos carruseles y segmentación por hábitos</li>
-                            <li>25,000 impresiones garantizadas + Push in-app</li>
+                            <li>25,000 impresiones garantizadas + notificaciones push</li>
                         </ul>
                     </div>
                     <div class="p-6 bg-gray-50">
@@ -368,10 +397,11 @@
                             <span class="text-4xl font-bold">US $6,000 – 15,000+</span>
                             <span class="text-base font-medium text-gray-500">/ mes</span>
                         </div>
-                        <p class="italic text-gray-600 my-4">“Domina el ecosistema wellness”</p>
+                        <p class="italic text-gray-600 my-4">“todo lo anterior”</p>
                         <ul class="list-disc list-inside space-y-2 text-gray-700 text-left flex-grow">
-                            <li>Exclusividad de categoría y +50K impresiones</li>
-                            <li>Retos gamificados, insights y API lead-gen</li>
+                            <li>Exclusividad de categoría</li>
+                            <li>+50K impresiones garantizadas</li>
+                            <li>insights y Producto de data leads calificados</li>
                         </ul>
                     </div>
                     <div class="p-6 bg-gray-50">
@@ -397,7 +427,7 @@
                             <ul class="space-y-3">
                                 <li class="flex items-start"><span class="text-green-500 font-bold mr-2">✔</span><p class="text-gray-700"><span class="font-semibold">ROI probado de 2.5:1</span> en nuestro MVP.</p></li>
                                 <li class="flex items-start"><span class="text-green-500 font-bold mr-2">✔</span><p class="text-gray-700"><span class="font-semibold">Segmentación basada en hábitos reales</span>.</p></li>
-                                <li class="flex items-start"><span class="text-green-500 font-bold mr-2">✔</span><p class="text-gray-700"><span class="font-semibold">Integración nativa</span> que incrementa CTR y redención.</p></li>
+                                <li class="flex items-start"><span class="text-green-500 font-bold mr-2">✔</span><p class="text-gray-700"><span class="font-semibold">Promociones que conectan:</span> Nuestras ofertas se integran de forma natural, logrando que más usuarios hagan clic y compren.</p></li>
                             </ul>
                         </div>
                     </div>
